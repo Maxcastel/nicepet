@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{# {% form_theme formCreerCroquette 'bootstrap_5_layout.html.twig' %} #}
+
+{% block body %}
+
+   <main id="page-create">
+
+   <div class="">
+      <a class="" href="{{ path('croquette') }}"><i class="fa-solid fa-arrow-left"></i>Voir toutes les croquettes</a>
+      <h1 class="text-center">Ajouter une nouvelle croquette</h1>
+    </div>
+
+    {# <div class="text-center">
+      <h1 class="mt-2">Ajouter une nouvelle croquette</h1>
+      <a class="" href="{{ path('croquette') }}"><i class="mr-3 fa-solid fa-arrow-left"></i>Voir toutes les croquettes</a>
+    </div> #}
+
+      {# <button type="submit" class="btn btn-success">
+        Creer l'article
+      </button>
+
+    {{ form_end(formCreerArticle) }} #}
+
+    {#{ form(formCreerArticle) }#}
+
+    <form action="" method="POST">
+      <div class="form-group">
+        <label for="name">Nom :</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="url">URL :</label>
+        <input type="text" class="form-control" id="url" name="url">
+      </div>
+
+      <div class="form-group">
+        <label for="url-image">URL de l'image :</label>
+        <input type="text" class="form-control" id="url-image" name="url-image">
+      </div>
+
+      <div class="form-group">
+        <label for="brand">Marque :</label>
+        <input type="text" class="form-control" id="brand" name="brand">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Catégorie :</label>
+        <input type="text" class="form-control" id="category" name="category">
+      </div>
+
+      <div class="form-group">
+        <p>Caractéristiques :</p>
+        <ul class="list-unstyled">
+          <li>
+            <label for="cendres">Cendres :</label>
+            <input type="text" class="form-control" id="cendres" name="cendres">
+          </li>
+          <li>
+            <label for="eau">Eau :</label>
+            <input type="text" class="form-control" id="eau" name="eau">
+          </li>
+          <li>
+            <label for="fibre">Fibre :</label>
+            <input type="text" class="form-control" id="fibre" name="fibre">
+          </li>
+          <li>
+            <label for="glucide">Glucide :</label>
+            <input type="text" class="form-control" id="glucide" name="glucide">
+          </li>
+          <li>
+            <label for="lipide">Lipide :</label>
+            <input type="text" class="form-control" id="lipide" name="lipide">
+          </li>
+          <li>
+            <label for="proteine">Protéine :</label>
+            <input type="text" class="form-control" id="proteine" name="proteine">
+          </li>
+        </ul>
+      </div>
+
+      <input class="btn btn-primary" type="submit" id="btn-creer" value="Créer" name="creer">
+    </form>
+
+
+    {# <form action="" method="POST">
+        <div class="form-group">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="url">Url :</label>
+          <input type="text" id="url" name="url">
+        </div>
+
+        <div class="form-group">
+          <label for="url-image">Url image :</label>
+          <input type="text" id="url" name="url-image">
+        </div>
+
+        <div class="form-group">
+          <label for="brand">Marque :</label>
+          <input type="text" id="url" name="brand">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Categorie :</label>
+          <input type="text" id="url" name="category">
+        </div>
+
+        <div class="form-group">
+          <p>Caracteristiques :</p>
+          <ul>
+            <li>
+              <label for="cendres">Cendres :</label>
+              <input type="text" id="url" name="cendres">
+            </li>
+            <li>
+              <label for="eau">Eau :</label>
+              <input type="text" id="url" name="eau">
+            </li>
+            <li>
+              <label for="fibre">Fibre :</label>
+              <input type="text" id="url" name="fibre">
+            </li>
+            <li>
+              <label for="glucide">Glucide :</label>
+            <input type="text" id="url" name="glucide">
+            </li>
+            <li>
+              <label for="lipide">Lipide :</label>
+            <input type="text" id="url" name="lipide">
+            </li>
+            <li>
+              <label for="proteine">Protéine :</label>
+            <input type="text" id="url" name="proteine">
+            </li>
+          </ul>
+        </div>
+
+          <input class="creer" type="submit" id="creer"value="Creer" name="creer">
+    </form> #}
+
+  </main>
+
+{% endblock %}

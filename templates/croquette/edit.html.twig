@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+
+{# {% form_theme formCreerCroquette 'bootstrap_5_layout.html.twig' %} #}
+
+{% block body %}
+
+  <main id="page-edit">
+
+    <h1 class="titre-h1">Modifier la croquette <span>{{ croquette.name }}</span> de la marque <span>{{ croquette.brand['name'] }}</span></h1>
+
+      {# <button type="submit" class="btn btn-success">
+        Creer l'article
+      </button>
+
+    {{ form_end(formCreerArticle) }} #}
+
+    {#{ form(formCreerArticle) }#}
+
+    {# <form action="" method="POST">
+        <div class="form-group">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" value="{{ croquette.name }}">
+        </div>
+
+        <div class="form-group">
+          <label for="brand">Marque :</label>
+          <input type="text" id="url" name="brand" value="{{ croquette.brand['name'] }}">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Categorie :</label>
+          <input type="text" id="url" name="category" value="{{ croquette.categories[0]['typePet'] }}">
+        </div>
+
+        <div class="info-croquette">
+          <p>Caracteristiques :</p>
+          <ul>
+            <li>
+              <label for="cendres">Cendres :</label>
+              <input type="text" id="url" name="cendres" value="{{ croquette.characteristic['cendres'] }}">
+            </li>
+            <li>
+              <label for="eau">Eau :</label>
+              <input type="text" id="url" name="eau" value="{{ croquette.characteristic['eau'] }}">
+            </li>
+            <li>
+              <label for="fibre">Fibre :</label>
+              <input type="text" id="url" name="fibre" value="{{ croquette.characteristic['fibre'] }}">
+            </li>
+            <li>
+              <label for="glucide">Glucide :</label>
+            <input type="text" id="url" name="glucide"value="{{ croquette.characteristic['glucide'] }}">
+            </li>
+            <li>
+              <label for="lipide">Lipide :</label>
+            <input type="text" id="url" name="lipide" value="{{ croquette.characteristic['lipide'] }}">
+            </li>
+            <li>
+              <label for="proteine">Protéine :</label>
+                <input type="text" id="url" name="proteine" value="{{ croquette.characteristic['proteine'] }}">
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-croquette">
+          <label for="url">Url :</label>
+          <input type="text" id="url" name="url" value="{{ croquette.url }}">
+        </div>
+
+        <div class="info-croquette">
+          <label for="url-image">Url image :</label>
+          <input type="text" id="url" name="url-image" value="{{ croquette.urlimage }}">
+        </div>
+
+          <input class="creer" type="submit" id="creer"value="Modifier" name="creer">
+    </form> #}
+
+    <form class="" action="" method="POST">
+      <div class="form-group">
+        <label for="name">Nom :</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ croquette.name }}">
+      </div>
+
+      <div class="form-group">
+        <label for="brand">Marque :</label>
+        <input type="text" class="form-control" id="brand" name="brand" value="{{ croquette.brand['name'] }}">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Catégorie :</label>
+        <input type="text" class="form-control" id="category" name="category" value="{{ croquette.categories[0]['typePet'] }}">
+      </div>
+
+      <div class="form-group">
+        <p>Caractéristiques :</p>
+        <ul class="list-unstyled">
+          <li>
+            <label for="cendres">Cendres :</label>
+            <input type="number" class="form-control" id="cendres" name="cendres" value="{{ croquette.characteristic['cendres'] }}">
+          </li>
+          <li>
+            <label for="eau">Eau :</label>
+            <input type="number" class="form-control" id="eau" name="eau" value="{{ croquette.characteristic['eau'] }}">
+          </li>
+          <li>
+            <label for="fibre">Fibre :</label>
+            <input type="number" class="form-control" id="fibre" name="fibre" value="{{ croquette.characteristic['fibre'] }}">
+          </li>
+          <li>
+            <label for="glucide">Glucide :</label>
+            <input type="number" class="form-control" id="glucide" name="glucide" value="{{ croquette.characteristic['glucide'] }}">
+          </li>
+          <li>
+            <label for="lipide">Lipide :</label>
+            <input type="number" class="form-control" id="lipide" name="lipide" value="{{ croquette.characteristic['lipide'] }}">
+          </li>
+          <li>
+            <label for="proteine">Protéine :</label>
+            <input type="number" class="form-control" id="proteine" name="proteine" value="{{ croquette.characteristic['proteine'] }}">
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-group">
+        <label for="url">URL :</label>
+        <input type="text" class="form-control" id="url" name="url" value="{{ croquette.url }}">
+      </div>
+
+      <div class="form-group">
+        <label for="url-image">URL de l'image :</label>
+        <input type="text" class="form-control" id="url-image" name="url-image" value="{{ croquette.urlimage }}">
+      </div>
+
+      <input class="btn btn-primary" type="submit" id="btn-modifier" value="Modifier" name="creer">
+    </form>
+
+
+    {# <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form> #}
+
+  </main>
+
+{% endblock %}

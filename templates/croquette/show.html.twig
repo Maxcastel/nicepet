@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CroquetteController!{% endblock %}
+
+{% block body %}
+    <main id="page-show">
+    
+    <div class="text-center titre-et-btn-create">
+        <h1 class="titre-h1">Informations sur la croquette <span>{{ croquette.name }}</span> de la marque <span>{{ croquette.brand['name'] }}</h1>
+        <a class="" href="{{ path('croquette') }}"><i class="fa-solid fa-arrow-left"></i>Voir toutes les croquettes</a>
+    </div>
+
+        <!--<table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class"table-secondary" colspan="2">Nom et Marque</th>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <th>Marque</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ croquette.name }}</td>
+                    <td>{{ croquette.brand['name'] }}</td>
+                </tr>
+            </tbody>
+        </table>-->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Nom</th>
+                    <th>Marque</th>
+                    <th>Caracteristiques</th>
+                    <th>Catégorie</th>
+                    <th>Url</th>
+                    <th  class="w-150">Date de création</th>
+                    <th>Validé</th>
+                    <th>Stérilisé</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {#{ dump(croquette) }#}
+                    <td class="d-flex flex-column"><img src="{{ croquette.urlimage }}"><p class="w-50">{{ croquette.urlimage }}</p></td>
+                    <td>{{ croquette.name }}</td>
+                    <td>{{ croquette.brand['name'] }}</td>
+                    <td>
+                        <ul>
+                        <li><p class="eau">eau : {{ croquette.characteristic['eau'] }}</p></li>
+                        <li><p class="fibre">fibre : {{ croquette.characteristic['fibre'] }}</p></li>
+                        <li><p class="glucide">glucide : {{ croquette.characteristic['glucide'] }}</p></li>
+                        <li><p class="lipide">lipide : {{ croquette.characteristic['lipide'] }}</p></li>
+                        <li><p class="proteine">proteine : {{ croquette.characteristic['proteine'] }}</p></li>
+                        </ul>
+                    </td>
+                    <td>{{ croquette.categories[0]['typePet'] }}</td>
+                    <td><a href="{{ croquette.url }}">{{ croquette.url }}</a></td>
+                    <td>
+                        <div class="d-flex">
+                            <p>{{ croquette.createdAt | date('d/m/y') }} à {{ croquette.createdAt | date('H:i') }}</p>
+                        </div>
+                    </td>
+                    <td>{{ croquette.validate == 1 ? '<p class="oui">oui</p>' : '<p class="non">non</p>' }}</td>
+                    <td>{{ croquette.sterilise == 1 ? '<p class="oui">oui</p>' : '<p class="non">non</p>' }}</td>
+                    <td>
+                        <ul> 
+                            <li><a class="" href="{{ path('croquette_edit', { 'id': croquette.id }) }}"><i class="fa-solid fa-pen-to-square"></i></a></li>
+                            <li><a class="" href="{{ path('croquette_deletebyid', { 'id': croquette.id }) }}"><i class="fa-solid fa-trash"></i></a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+{% endblock %}

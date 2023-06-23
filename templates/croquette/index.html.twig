@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CroquetteController!{% endblock %}
+
+{% block body %}
+    <main id="page-index">
+    
+        <h1>Gérer les croquettes</h1>
+        <div class="d-flex flex-column mb-3 actions-links">
+            <a href="{{ path('croquette_show') }}">Voir les croquettes</a>
+            <a href="{{ path('croquette_new') }}">Ajouter des croquettes</a>
+            <a href="{{ path('croquette_edit') }}">Modifier des croquettes</a>
+            <a href="{{ path('croquette_delete') }}">Supprimer des croquettes</a>
+        </div>
+
+    </main>
+{% endblock %}

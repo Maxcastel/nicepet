@@ -1,0 +1,381 @@
+/* *{
+    margin: 0;
+} */
+
+/* h1{
+    text-align: center;
+} */
+
+/* #page-croquettes .titre-et-btn-new{
+    text-align: center;
+} */
+
+#page-croquettes .titre-et-btn-new i{
+    margin-right: 5px;
+}
+
+.titre-h1{
+    font-size: 25px;
+}
+
+/* PAGE INDEX */
+
+/*#page-index .actions-links{
+    display: flex;
+    flex-direction: column;
+}
+
+#page-index .actions-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}*/
+
+/* PAGE CROQUETTES */
+
+#page-croquettes a{
+    text-decoration: none;
+    color: black;
+}
+
+#page-croquettes ul li a{
+    /* background-color: red; */
+    padding: 10px;
+}
+
+#page-croquettes ul{
+    list-style: none;
+    padding: 0;
+}
+
+#page-croquettes ul li+li a{
+    /* color: blue; */
+    margin-left: -5px;
+}
+
+/* #page-croquettes ul li a{
+    margin-right: 10px;
+} */
+
+#page-croquettes i{
+    /* color: green; */
+    font-size: 18px;
+}
+
+#page-croquettes ul li:nth-child(1) i{
+    color: rgb(45, 45, 45);
+}
+
+#page-croquettes ul li:nth-child(2) i{
+    color: rgb(76, 76, 184);
+}
+
+#page-croquettes ul li:nth-child(3) i{
+    color: #c74848;
+}
+
+#page-croquettes table td:nth-of-type(-n+2) a{
+    width: 100%;
+    display: block;
+    align-items: center;
+}
+
+/*.btn-outline-primary:hover{
+    color: white;
+}*/
+
+/*#page-show a:hover{
+    color: blue;
+}
+
+#page-show table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#page-show table td,th{
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid black;
+}*/
+
+/* PAGE SHOW */
+
+#page-show span{
+    font-weight: 700;
+}
+
+#page-show table ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+#page-show table td:nth-child(10) ul li:nth-child(1) i{
+    color: rgb(76, 76, 184);
+}
+
+#page-show table td:nth-child(10) ul li:nth-child(2) i{
+    color: #c74848;
+}
+
+#page-show table .oui{
+    display: inline-block;
+    background-color: rgb(139, 234, 139);
+}
+
+#page-show table .non{
+    display: inline-block;
+    background-color: #fda1a1;
+}
+
+#page-show table .eau{
+    display: inline-block;
+    background-color: #bbdeff;
+}
+
+#page-show table .fibre{
+    display: inline-block;
+    background-color: rgb(197, 253, 197);
+}
+
+#page-show table .glucide{
+    display: inline-block;
+    background-color: #d7d7d7;
+}
+
+#page-show table .lipide{
+    display: inline-block;
+    background-color: rgb(253, 189, 255);
+}
+
+#page-show table .proteine{
+    display: inline-block;
+    background-color: rgb(255, 214, 185);
+}
+
+#page-show table .oui,#page-show table .non,#page-show table .eau, #page-show table .fibre, #page-show table .glucide,
+#page-show table .lipide, #page-show table .proteine{
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+#page-show a{
+   text-decoration: none;
+   color: black;
+}
+
+/* #page-show a:hover{
+    text-decoration: underline;
+} */
+
+#page-show img{
+    width: 130px;
+}
+
+/* #page-show td:nth-child(7) table td, {
+    padding: 5px;
+} */
+
+/* #page-show td:nth-child(7) table td,#page-show td:nth-child(7) table th{
+    border: 1px solid black;
+    padding: 5px;
+} */
+
+#page-show>table{
+    /* margin: 0 20px; */
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+}
+
+#page-show>table>td{
+    padding: 30px 12px;
+}
+
+#page-show .titre-h1{
+    margin-top: 30px;
+}
+
+#page-show td:nth-child(10) ul{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+/* #page-show ul li+li a{
+    color: blue;
+    margin-left: 5px;
+} */
+
+#page-show i{
+    /* color: green; */
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+#page-show td:nth-child(10) ul li a{
+    /* background-color: red; */
+    padding: 10px;
+}
+
+/* PAGE EDIT */
+
+#page-edit form{
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+#page-edit form .form-group:nth-child(4) p{
+    /* color: rebeccapurple; */
+    /* margin: 10px 0 5px 0; */
+    margin: 10px 0;
+}
+
+#page-edit span{
+    font-weight: 700;
+}
+
+#page-edit form #btn-modifier{
+    margin-top: 10px;
+}
+
+/* PAGE CREATE */ 
+
+#page-create h1{
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+#page-create a{
+    text-decoration: none;
+    color: black;
+    
+ }
+
+#page-create i{
+    margin-right: 5px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+#page-create form{
+    margin: 0 auto;
+    width: 75%;
+    margin-bottom: 30px;
+}
+
+#page-create form .form-group:nth-child(4) p{
+    /* color: rebeccapurple; */
+    /* margin: 10px 0 5px 0; */
+    margin: 10px 0;
+}
+/* 
+#page-create form #btn-creer{
+    margin-top: 10px;
+} */
+
+/* HEADER BOOTSTRAP */
+
+/* .nav{
+    justify-content: space-between;
+}
+
+.bloc-droite{
+    display: contents;
+}
+
+.nav .nav-link{
+    color: black;
+}
+
+.nav-item:nth-child(1) a{
+    font-weight: 700;
+}
+
+.nav-item:nth-child(2) a{
+    font-weight: 600;
+} */
+
+/* NAVBAR */ 
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    /* background-color: gainsboro; */
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav li:nth-child(1) a {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+nav li:nth-child(2) p {
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 100px;
+}
+
+li.center {
+    flex-grow: 1; /* Permet à Espace Administration de prendre l'espace disponible */
+    text-align: center; /* Centre le texte */
+}
+
+nav p {
+    margin: 0;
+}
+
+nav li {
+    margin-right: 10px; 
+}
+
+
+
+/* nav ul{
+    position: fixed;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+} */
+
+/* PAGE LOGIN */
+
+#page-login input{
+     /* width: 50%; */
+}
+
+#page-login form{
+    
+}
+
+#page-login .erreur{
+    margin: 0;
+}
+
+#page-login form .mb-3:nth-child(1){
+    margin-bottom: 8px!important;
+}
+
+/* PAGE SIGN UP */
+
+#page-signup{
+    
+}

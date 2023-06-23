@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CroquetteController!{% endblock %}
+
+{% block body %}
+    <main id="page-croquettes">
+
+        <div class="text-center mt-4 titre-et-btn-new">
+            <h1 class="titre-h1">Liste des croquettes</h1>
+            <a class="" href="{{ path('croquette_new') }}"><i class="mb-3 fa-solid fa-plus"></i>Créer une croquette</a>
+        </div>
+
+        <table class="table table-striped table-hover container">
+            <thead>
+                <tr>
+                    <th>Nom du produit</th>
+                    <th>Marque</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for croquette in croquettes %}
+                <tr>
+                    <td class="py-4"><a href="{{ path('croquette_show', { 'id': croquette.id }) }}">{{ croquette.name }}</a></td>
+                    <td class="py-4"><a href="{{ path('croquette_show', { 'id': croquette.id }) }}">{{ croquette.brand['name'] }}</a></td>
+                    <td class="py-4">
+                        <ul class="d-flex flex-row mb-0"> 
+                           <li><a class="" href="{{ path('croquette_show', { 'id': croquette.id }) }}"><i class="fa-solid fa-eye"></i></a></li>
+                            <li class="mx-3"><a class="" href="{{ path('croquette_edit', { 'id': croquette.id }) }}"><i class="fa-solid fa-pen-to-square"></i></a></li>
+                            <li><a class="" href="{{ path('croquette_deletebyid', { 'id': croquette.id }) }}"><i class="fa-solid fa-trash"></i></a></li>
+                        </ul>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </main>
+{% endblock %}
